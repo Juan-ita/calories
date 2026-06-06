@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Calorie Counter</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/beb9c9acc8.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-100">
+    <section class="bg-white max-w-md mx-auto p-6 space-y-6 rounded-xl mt-6">
+        <h1 class="text-2xl text-sky-400 font-bold flex justify-center">Calorie Counter</h1>
+        <div class="bg-sky-50 space-y-3 py-5 rounded-xl">
+            <h2 class="flex justify-center text-sky-900">TOTAL CALORIES</h2>
+            <p id="total-display" class="flex justify-center text-sky-700 font-bold text-4xl">0</p>
+        </div>
+        <form id="food-form" class="space-y-3">
+            <label for="food name"></label>
+            <input id="food-name" type="text" placeholder="Enter food name(eg.Mango)" required
+            class="w-full border border-gray-200 py-2 rounded-lg focuse:outlin-none p-2">
+            <label for="Calories"></label>
+            <input id="food-calories" type="number" placeholder="Calories(eg.100)" required
+            class="w-full border border-gray-200 py-2 rounded-lg focuse:outline-none p-2">
+
+            <button type="submit" class="bg-sky-800 text-white font-bold w-full py-2 rounded-lg cursor-pointer hover:bg-sky-600 ">Add Food</button>
+        </form>
+
+        <div>
+            <div class="flex justify-between mb-2">
+                <h3 class="font-bold">Today's Food Log</h3>
+                <button id="reset-button" class="text-red-400 hover:underline text-sm">clear all</button>
+            </div>
+
+            <ul id="food-list" class="border-t divide-y text-gray-500 "></ul>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
